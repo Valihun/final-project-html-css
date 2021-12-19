@@ -1,0 +1,653 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: calc(100% - 60px);
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+@media (max-width: 1600px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 375px;
+  }
+}
+
+@media (max-width: 376px) {
+  .container {
+    width: 320px;
+  }
+}
+
+@media (max-width: 330px) {
+  .container {
+    width: 270px;
+  }
+}
+
+.header {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: #232021;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #232021;
+  z-index: 2;
+}
+
+.header__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__logo {
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.header .menu__list {
+  position: relative;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .menu__list li.active a,
+.header .menu__list a:hover {
+  color: #968214;
+}
+
+.header .menu__link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #D1A110;
+  margin: 0px 0px 0px 100px;
+  font-family: "Karate";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+  .header__logo {
+    margin-left: 0px;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 40px;
+    margin-right: 20px;
+    z-index: 3;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    top: 18px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::before, .header__burger::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger.active::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header .menu__body {
+    z-index: 1;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #313131;
+    overflow: auto;
+    padding: 80px 0px 0px 0px;
+    display: block;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  .header .menu__body.active {
+    top: 0;
+  }
+  .header .menu__list {
+    display: block;
+  }
+  .header .menu__list li {
+    font-size: 25px;
+    margin: 0px 0px 30px 0px;
+  }
+}
+
+.banners {
+  position: relative;
+  margin: 100px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+  height: 100%;
+  /*==========================================
+					Адаптив для банеров
+	==========================================*/
+}
+
+.banners__container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.banners__text {
+  margin: auto;
+  font-family: "Karate";
+  color: #D1A110;
+  font-size: 120px;
+  font-weight: 900;
+  letter-spacing: 10px;
+}
+
+.banners__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.banners__img img {
+  width: 100%;
+  height: 100%;
+  opacity: 20%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+}
+
+.banners__btn {
+  display: inline-block;
+  width: 550px;
+  height: 110px;
+  background-color: #AD5329;
+  margin-top: 50px;
+  color: #D1A110;
+  font-family: "Karate";
+  font-size: 70px;
+  letter-spacing: 30px;
+  border: 5px solid #D1A110;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .banners__text {
+    font-size: 100px;
+  }
+  .banners__btn {
+    width: 450px;
+    height: 90px;
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banners__text {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banners__text {
+    font-size: 60px;
+  }
+  .banners__btn {
+    width: 350px;
+    height: 70px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .banners__text {
+    font-size: 50px;
+  }
+  .banners__btn {
+    width: 300px;
+    height: 60px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .banners__text {
+    font-size: 40px;
+  }
+  .banners__btn {
+    width: 250px;
+    height: 60px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .banners__text {
+    font-size: 25px;
+  }
+}
+
+.dishes {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 50px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.dishes__container {
+  position: inherit;
+  z-index: 1;
+  text-align: center;
+}
+
+.dishes__text {
+  font-family: "Karate";
+  font-size: 50px;
+  letter-spacing: 20px;
+  color: #D1A110;
+}
+
+.dishes__body {
+  background-color: #232021;
+  margin-top: 50px;
+  height: 800px;
+  padding: 25px;
+}
+
+.dishes__main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 475px 475px 475px;
+      grid-template-columns: 475px 475px 475px;
+  -ms-grid-rows: 350px 350px;
+      grid-template-rows: 350px 350px;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 50px;
+}
+
+.dishes__item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.dishes__item img {
+  width: 100%;
+  height: 100%;
+}
+
+.dishes .item__text {
+  display: none;
+  position: absolute;
+  top: 30%;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  color: #D1A110;
+  font-size: 50px;
+  font-family: "Caveat", cursive;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.dishes__item:hover img {
+  -webkit-transition: opacity, 0.5s;
+  transition: opacity, 0.5s;
+  opacity: 10%;
+}
+
+.dishes__item:hover .item__text {
+  display: block;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 60px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.map__container {
+  position: inherit;
+  z-index: 1;
+  text-align: center;
+}
+
+.map__text {
+  font-family: "Karate";
+  font-size: 50px;
+  letter-spacing: 20px;
+  color: #D1A110;
+}
+
+.map__body {
+  width: 100%;
+  height: 800px;
+  margin-top: 50px;
+}
+
+.about-us {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 60px;
+  padding: 0;
+}
+
+.about-us__container {
+  width: 1318px;
+  height: inherit;
+  position: inherit;
+  z-index: 1;
+  margin-top: 350px;
+}
+
+.about-us__header {
+  text-align: center;
+  font-family: "Karate";
+  color: #D1A110;
+  font-size: 50px;
+  padding: 20px 0px;
+}
+
+.about-us__body {
+  width: 100%;
+  height: 100%;
+  background-color: #AD5329;
+  font-family: "Caveat", cursive;
+  color: #D1A110;
+  font-size: 28px;
+}
+
+.reservation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+
+.reservation__container {
+  position: inherit;
+  z-index: 1;
+}
+
+.reservation__text {
+  text-align: center;
+  font-family: "Karate";
+  font-size: 50px;
+  color: #D1A110;
+  margin-bottom: 50px;
+}
+
+.reservation__body {
+  margin: 0 auto;
+}
+
+.reservation__form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reservation__form .form__email,
+.reservation__form .form__name,
+.reservation__form .form__message {
+  color: #D1A110;
+  font-family: "Caveat", cursive;
+  font-size: 50px;
+}
+
+.reservation__form .form__email > input,
+.reservation__form .form__message > input,
+.reservation__form .form__name > input {
+  width: 800px;
+  height: 50px;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.reservation__form .form__email > input::-webkit-input-placeholder,
+.reservation__form .form__name > input::-webkit-input-placeholder,
+.reservation__form .form__message > input::-webkit-input-placeholder {
+  font-size: 30px;
+  text-align: center;
+}
+
+.reservation__form .form__email > input:-ms-input-placeholder,
+.reservation__form .form__name > input:-ms-input-placeholder,
+.reservation__form .form__message > input:-ms-input-placeholder {
+  font-size: 30px;
+  text-align: center;
+}
+
+.reservation__form .form__email > input::-ms-input-placeholder,
+.reservation__form .form__name > input::-ms-input-placeholder,
+.reservation__form .form__message > input::-ms-input-placeholder {
+  font-size: 30px;
+  text-align: center;
+}
+
+.reservation__form .form__email > input::placeholder,
+.reservation__form .form__name > input::placeholder,
+.reservation__form .form__message > input::placeholder {
+  font-size: 30px;
+  text-align: center;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 100px;
+  background-color: #AD5329;
+}
+
+.footer__container {
+  position: inherit;
+  z-index: 1;
+}
+
+.footer__body {
+  margin: 0 auto;
+}
