@@ -2,20 +2,20 @@
 DONE - Контент власний, тематичний, адекватний.
 DONE - Інформаційний: переважно у текстовій формі. Наприклад, інформація про фірму, товари, послуги.
 DONE - Графічний: альбоми, галереї
-		Динамічний: слайдери, accordion,  керовані галереї
+DONE - Динамічний: слайдери, accordion,  керовані галереї
 		Схематичне представлення товару/послуг із  використанням SVG графіки
 DONE - Форма: анкети, бланки замовлень, тощо.
 DONE - Макет desktop, tablet, mobyle
 DONE - Колонки: 3-2-1
 DONE - Таблиці (картинки): 6-4-2
-		Відповідно кнопки/посилання панелі навігації
-		Задіяти (проілюструвати) технології:
-		Адаптивність тексту
+DONE - Відповідно кнопки/посилання панелі навігації
+DONE - Задіяти (проілюструвати) технології:
+DONE - Адаптивність тексту
 DONE - Види сіток: div(float), grid, flexbox
-		Адаптивнісь img (із заміною зображення)
+DONE - Адаптивнісь img (із заміною зображення)
 DONE - CSS ефекти (графічні зображення, посилання,  SVG, тощо)
 DONE - Кастомізувати елементи форми (input - и, select)
-		Розробити логотипи: 4. Галерея практика
+DONE - Розробити логотипи: 4. Галерея практика
 DONE - Застосувати різні види селекторів, у тому числі групування,  комбінування, псевдокласи....
 DONE - Викласти проєкт на Github у вигляді сайту. Додати zip-архів та Звіт по проєкту до поточного Завдання, посилання на сайт до поля Текст онлайн. 
 		Захист роботи обов'язковий.
@@ -41,7 +41,9 @@ DONE - Викласти проєкт на Github у вигляді сайту. �
 		<header class="header">
 			<div class="container">
 				<div class="header__body">
-					<a href="/" class="header__logo"><img src="img/logo.png" alt="" /></a>
+					<a href="/" class="header__logo"
+						><img src="css/img/logo.png" alt=""
+					/></a>
 					<div class="header__burger">
 						<span></span>
 					</div>
@@ -64,7 +66,9 @@ DONE - Викласти проєкт на Github у вигляді сайту. �
 				<div class="banners__text">Chens restaurant</div>
 				<a href="#reservation" class="banners__btn">Book</a>
 			</div>
-			<div class="banners__img"><img src="img/bg_banners.jpeg" alt="" /></div>
+			<div class="banners__img">
+				<img src="css/img/bg_banners.jpeg" alt="" />
+			</div>
 		</section>
 
 		<section class="dishes" id="menu">
@@ -73,31 +77,31 @@ DONE - Викласти проєкт на Github у вигляді сайту. �
 				<div class="dishes__body">
 					<div class="dishes__main">
 						<div class="dishes__item">
-							<img src="img/1.jpg" alt="" />
+							<img src="css/img/1.jpg" alt="" />
 							<div class="item__text">2 Piece Egg Rolls $2.55</div>
 						</div>
 						<div class="dishes__item">
-							<img src="img/2.jpg" alt="" />
+							<img src="css/img/2.jpg" alt="" />
 							<div class="item__text">
 								General Wang's Chicken Served with rice. Hot and spicy. $7.25 +
 							</div>
 						</div>
 						<div class="dishes__item">
-							<img src="img/3.jpg" alt="" />
+							<img src="css/img/3.jpg" alt="" />
 							<div class="item__text">
 								Combination Fried Rice Shrimp, beef and chicken. $5.55 +
 							</div>
 						</div>
 						<div class="dishes__item">
-							<img src="img/4.jpg" alt="" />
+							<img src="css/img/4.jpg" alt="" />
 							<div class="item__text">6 Piece Pot Stickers $4.95</div>
 						</div>
 						<div class="dishes__item">
-							<img src="img/5.jpg" alt="" />
+							<img src="css/img/5.jpg" alt="" />
 							<div class="item__text">8 Piece Crab Rangoon $5.95</div>
 						</div>
 						<div class="dishes__item">
-							<img src="img/6.jpg" alt="" />
+							<img src="css/img/6.jpg" alt="" />
 							<div class="item__text">4 Piece Crab Rangoon $3.00</div>
 						</div>
 					</div>
@@ -110,7 +114,7 @@ DONE - Викласти проєкт на Github у вигляді сайту. �
 				<div class="map__text">Map</div>
 				<div class="map__body">
 					<a href="https://goo.gl/maps/EospjGRY5YjTtVcj6"
-						><img src="img/map.jpg" alt=""
+						><img src="css/img/map.jpg" alt=""
 					/></a>
 				</div>
 			</div>
@@ -182,14 +186,26 @@ DONE - Викласти проєкт на Github у вигляді сайту. �
 						</div>
 						<svg width="100" height="100">
 							<circle
-								cx="50"
-								cy="50"
-								r="40"
+								cx="30"
+								cy="30"
+								r="25"
 								stroke="green"
 								stroke-width="4"
 								fill="yellow"
 							/>
 						</svg>
+						<div class="changepic container">
+							<img src="css/img/11.jpeg" alt="img" />
+						</div>
+						V<sub>A</sub>L<sub>I</sub>H<sub>U</sub>N
+						<p style="color: white">Valihun</p>
+						<span style="vertical-align: middle; color: white">V</span>
+						<span style="vertical-align: top; color: gray">A</span>
+						<span style="vertical-align: middle; color: aqua">L</span>
+						<span style="vertical-align: sub; color: blue">I</span>
+						<span style="vertical-align: middle; color: pink">H</span>
+						<span style="vertical-align: top; color: red">U</span>
+						<span style="vertical-align: middle; color: orange">N</span>
 					</div>
 				</div>
 			</div>

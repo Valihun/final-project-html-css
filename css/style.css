@@ -137,7 +137,7 @@ h6 {
 
 .carousel {
   width: 100%;
-  height: 900px;
+  height: 100%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-box-align: center;
@@ -149,9 +149,12 @@ h6 {
 
 .carousel img {
   width: 100%;
+  height: 700px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 8px solid white;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .item {
@@ -181,6 +184,16 @@ h6 {
   color: white;
   background: rgba(0, 0, 0, 0.3);
   height: 35px;
+}
+
+.login {
+  width: 100%;
+  height: 900px;
+}
+
+.login__text {
+  color: #D1A110;
+  font-family: 'Caveat', cursive;
 }
 
 body {
@@ -1205,6 +1218,39 @@ body.lock {
   font-family: "Caveat", cursive;
 }
 
+.footer__main > span {
+  -webkit-box-shadow: 2px 5px gray;
+          box-shadow: 2px 5px gray;
+}
+
+.changepic {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid white;
+  float: right;
+}
+
+.changepic > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .changepic {
+    background: url("img/3.jpg");
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .changepic > img {
+    display: none;
+  }
+}
+
 /*==========================================
 					Адаптив для футера
 	==========================================*/
@@ -1223,7 +1269,7 @@ body.lock {
     width: 100%;
   }
   .footer .contact__us > a {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -1233,6 +1279,6 @@ body.lock {
     width: 100%;
   }
   .footer .contact__us > a {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
